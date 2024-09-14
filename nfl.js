@@ -1,11 +1,11 @@
+
+
 const cards = document.querySelectorAll('.memory-card');
 
 const flipCard = () => {
-    console.log('click to flip');
-    console.log(this); // allows action from cards eventListener flipCard function
+    this.classList.toggle('click to flip');
 }
 
-  cards.forEach(cards => cards.addEventListener('click', flipCard)); 
     
  const handleClick = (event) => {
     flipCard(event)
@@ -24,3 +24,4 @@ const flipCard = () => {
 
     
  }
+ cards.forEach(cards => cards.addEventListener('click', flipCard)); 
