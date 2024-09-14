@@ -6,7 +6,40 @@
 
 body {
     height: 100vh;
+    display: flex;
     background: black;
+}
+
+.memory-game {
+width: 640px;
+height: 640px;
+margin: auto;
+display: flex;
+flex-wrap: wrap;
+}
+
+.memory-card {
+width: calc (25% - 10px);
+height: calc(33.333% - 10);
+margin: 5px;
+position: relative;
+transform: scale(1);
+}
+
+.memory-card:active {
+    transform: scale(.97);
+    transition: transform .2s;
+}
+
+.front-face,
+.back-face {
+width: 100px;
+height: 100px;
+padding: 20px;
+position: absolute;
+border-radius: 5px;
+background: black;;
+border: 2px darkgoldenrod;
 }
 
 p {
@@ -14,49 +47,6 @@ p {
     font-family: 14px Arial, Helvetica, sans-serif;
 }
 
-.memory-game {
-    width: 700px;
-    height: 700px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    border: 2px solid darkgoldenrod;
-}
-
-.memory-card {
+/*img {
     width: 100px;
-    height: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    position: absolute;
-    border: 2px solid darkgoldenrod;
-}
-
-.front-face,
-.back-face {
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-    position: absolute;
-    border-radius: 5px;
-    background-color: white;
-    border: 2px solid black;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    backface-visibility: hidden;
-    transition: transform 0.6s;
-}
-
-.front-face {
-    z-index: 2;
-    transform: rotateY(0deg);
-}
-
-.back-face {
-    transform: rotateY(180deg);
-}
+}*/
