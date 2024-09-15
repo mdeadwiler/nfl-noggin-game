@@ -14,7 +14,7 @@ const cards = document.querySelectorAll('.memory-card');
 
 const flipCard = () => {
     this.classList.toggle('click to flip');
-    this.
+    
 }
 
     
