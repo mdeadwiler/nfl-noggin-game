@@ -7,39 +7,56 @@
 body {
     height: 100vh;
     display: flex;
+    background-position: initial;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 600;
+    font-style: normal;
     background: black;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: auto;
+  }
+
 .memory-game {
-width: 640px;
-height: 640px;
+width: 600px;
+height: 600px;
 margin: auto;
 display: flex;
+justify-content: space-between;
 flex-wrap: wrap;
+perspective: 1000px;
 }
 
 .memory-card {
-width: calc (25% - 10px);
-height: calc(33.333% - 10);
+width: calc(25% - 1px);
+height: calc(26% - 10);
 margin: 5px;
 position: relative;
+flex-direction: column;
 transform: scale(1);
+transform-style: preserve-3d;
+transition: transform 0.5s;
 }
 
 .memory-card:active {
-    transform: scale(.97);
-    transition: transform .2s;
+    transform: scale(.47);
+    transition: transform .3s;
 }
 
 .front-face,
 .back-face {
 width: 100px;
 height: 100px;
-padding: 20px;
+border-radius: 55px;
 position: absolute;
-border-radius: 5px;
+padding: 20px;
+backface-visibility: hidden;
 background: black;;
-border: 2px darkgoldenrod;
+border: 5px darkgoldenrod;
 }
 
 img {
@@ -49,6 +66,7 @@ img {
 h1 {
     color: darkgoldenrod;
     font-family: 14px Arial, Helvetica, sans-serif;
+    font-size: 45px;
 }
 
 
@@ -67,3 +85,13 @@ title {
     font-family: 14px Arial, Helvetica, sans-serif;
 }
 
+#reset {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 150px;
+    font-size: 20px;
+    border:darkgoldenrod;
+    border-radius: 18px;
+    padding: 0px;
+  }
