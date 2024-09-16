@@ -32,6 +32,10 @@ transform: scale(1);
     transition: transform 0.3s;
   }
   
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
 .front-face,
 .back-face {
 width: 100px;

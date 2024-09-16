@@ -10,16 +10,23 @@
 //if all selected cards match before timer is ended then player wins game
 // click to reset for new game
 
-const cards = document.querySelectorAll('.memory-card');
+const cards = document.querySelectorAll(".memory-card");
 
-const flipCard = () => {
+function flipCard() {
+  this.classList.toggle("flip")
+}
+
+cards.forEach(cards => cards.addEventListener("click", flipCard)); 
+
+
+
+
+/*const flipCard = () => {
     this.classList.toggle('click to flip');
     
 }
-
-    
- const handleClick = (event) => {
-    flipCard(event)
+const handleClick = () => {
+    flipCard()
     //start()
     //shuffle()
     //lockBoard
@@ -32,7 +39,5 @@ const flipCard = () => {
     //timerOut
     //endGame
     //reset
+}*/
 
-    
- }
- cards.forEach(cards => cards.addEventListener('click', flipCard)); 
