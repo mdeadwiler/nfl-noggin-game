@@ -10,6 +10,7 @@
 //if all selected cards match before timer is ended then player wins game
 // click to reset for new game
 
+
 const cards = document.querySelectorAll(".memory-card");
 let hasFlippedCard = false;
 let firstCard, secondCard;
