@@ -96,7 +96,7 @@ function shuffle() {
   }// source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random && https://www.youtube.com/watch?v=NGtx3EBlpNE
   
 function resetGame() {
-  window.location.reload();
+  window.location.reload();// source: https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial
 }
 cards.forEach(cards => cards.addEventListener("click", flipCard)); 
 
