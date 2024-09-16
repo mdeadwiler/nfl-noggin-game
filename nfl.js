@@ -18,14 +18,26 @@ function flipCard() {
   this.classList.add("flip");
   
   if(!hasFlippedCard) {
-    //first click
+    //first card click
     hasFlippedCard = true;
     firstCard = this;
   } else {
-    //second card
+    //second card click
     hasFlippedCard = false;
     secondCard = this;
-    console.log({firstCard, secondCard});
+    
+    // cards match?
+    if (firstCard.dataset.players === secondCard.dataset.players) {
+        // match!
+        firstCard.removeEventListener("click", flipCard);
+        secondCard.removeEventListener("click", flipCard);
+    } else {
+        // not a match!
+    setTimeout(() => {
+        firstCard.classicList.remove("flip");
+        secondCard.classicList.remove("flip");
+    }, 500);
+    }
   }
 }
 
@@ -40,17 +52,18 @@ cards.forEach(cards => cards.addEventListener("click", flipCard));
 }
 const handleClick = () => {
     flipCard()
-    //start()
-    //shuffle()
-    //lockBoard
-    //firstCard()
-    //secondCard()
-    //roundAttempt -- if there were three rounds
-    // flipCard()
-    // matchCard
-    //removeCard
-    //timerOut
-    //endGame
-    //reset
+    start()
+    shuffle()
+    lockBoard()
+    firstCard()
+    secondCard()
+    roundAttempt -- if there were three rounds
+    matchCard()
+    removeCard()
+    timerOut()
+    endGame()
+    reset()
 }*/
 
+/*console.log(firstCard.dataset.players);
+    console.log(secondCard.dataset.players);*/
