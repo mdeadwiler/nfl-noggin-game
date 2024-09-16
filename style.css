@@ -6,42 +6,16 @@
 
 body {
     height: 100vh;
-    background-position: initial;
-    background-image: url(./images/nflTeam.jpg);
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
     background: black;
 }
 
-#start {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    color: darkgoldenrod;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: larger;
-    font-style: oblique;
-  }
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: sticky; 
-    flex-direction: column;
-    margin: auto;
-  }
 
 .memory-game {
-width: 600px;
-height: 600px;
-margin: auto;
+width: 640px;
+height: 640px;
 display: flex;
-/*justify-content: space-between;*/
 flex-wrap: wrap;
+border: 2px solid darkgoldenrod;
 }
 
 .memory-card {
@@ -49,58 +23,22 @@ width: calc(25% - 10px);
 height: calc(33.333% - 10px);
 margin: 5px;
 position: relative;
-flex-direction: column;
-transform: scale(1);
+border: 2px solid darkgoldenrod;
 }
 
-.memory-card:active {
-    transform: scale(.47);
-    transition: transform .3s;
-}
 
 .front-face,
 .back-face {
 width: 100px;
 height: 100px;
-position: absolute;
 padding: 20px;
+position: absolute;
+border-radius: 5px;
+border: 2px solid darkgoldenrod;
 background: black;
-border: 5px darkgoldenrod;
 }
 
-img {
+/*img {
     width: 100px;
-}
+}*/
 
-h1 {
-    color: darkgoldenrod;
-    font-family: 14px Arial, Helvetica, sans-serif;
-    font-size: 45px;
-}
-
-
-p {
-    color: darkgoldenrod;
-    font-family: 14px Arial, Helvetica, sans-serif;
-}
-
-ul {
-    color: darkgoldenrod;
-    font-family: 14px Arial, Helvetica, sans-serif;
-}
-
-title {
-    color: darkgoldenrod;
-    font-family: 14px Arial, Helvetica, sans-serif;
-}
-
-#reset {
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    color: darkgoldenrod;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: larger;
-    font-style: oblique;
-  }
