@@ -17,6 +17,7 @@ margin: auto;
 display: flex;
 flex-wrap: wrap;
 border: 2px solid white;
+perspective: 1000px
 }
 
 .memory-card {
@@ -25,6 +26,8 @@ height: calc(33.333% - 10px);
 margin: 5px;
 position: relative;
 transform: scale(1);
+transform-style: preserve-3d;
+transition: transform .5s;
 }
 
 .memory-card:active {
