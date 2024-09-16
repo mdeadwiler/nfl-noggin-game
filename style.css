@@ -45,6 +45,11 @@ position: absolute;
 border-radius: 5px;
 border: 5px solid darkgoldenrod;
 background: whitesmoke;
+backFace-visibility: hidden;
+}
+
+.front-face {
+    transform: rotateY(180deg)
 }
 
 .memory-card.flip {
