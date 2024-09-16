@@ -16,7 +16,7 @@ height: 640px;
 margin: auto;
 display: flex;
 flex-wrap: wrap;
-border: 2px solid darkgoldenrod;
+border: 2px solid white;
 }
 
 .memory-card {
@@ -35,17 +35,18 @@ transform: scale(1);
 
 .front-face,
 .back-face {
-width: 100px;
-height: 100px;
-padding: 20px;
+width: 140px;
+height: 175px;
+padding: 5px;
 position: absolute;
 border-radius: 5px;
-border: 2px solid darkgoldenrod;
-background: black;
+border: 5px solid darkgoldenrod;
+background: whitesmoke;
 }
 
 .memory-card.flip {
     transform: rotateY(180deg);
+    
 }
 
 
