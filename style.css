@@ -6,15 +6,18 @@
 
 body {
     height: 100vh;
-    display: flex;
     background-position: initial;
+    background-image: url(./images/nflTeam.jpg);
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
     background: black;
 }
 
 #start {
+    display: flex;
+    justify-content: center;
     margin: auto;
     color: darkgoldenrod;
     padding: 10px;
@@ -25,8 +28,10 @@ body {
 
 .container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky; 
     flex-direction: column;
-    text-align: center;
     margin: auto;
   }
 
@@ -90,10 +95,9 @@ title {
 }
 
 #reset {
-    margin: auto;
-    position: relative;
+    display: flex;
     justify-content: center;
-    align-items:flex-end;
+    margin: auto;
     color: darkgoldenrod;
     padding: 10px;
     border-radius: 10px;
