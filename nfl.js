@@ -95,14 +95,16 @@ function shuffle() {
     //shuffle();
   }// source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random && https://www.youtube.com/watch?v=NGtx3EBlpNE
   
-
-  
-
-  startButton.addEventListener("click", flipCard)
-  resetButton.addEventListener("click", flipCard);
+function resetGame() {
+  window.location.reload();
+}
 cards.forEach(cards => cards.addEventListener("click", flipCard)); 
 
 
+  startButton.addEventListener("click", startButton)
+  resetButton.addEventListener("click", resetGame);
+
+shuffle();
 
 //source: https://www.youtube.com/watch?v=ZniVgo8U7ek
     //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
