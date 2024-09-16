@@ -11,8 +11,8 @@
 //if all selected cards match before timer is ended then player wins game
 // click to reset for new game
 
-const startButton = document.querySelector("#start");
-const resetButton = document.querySelector("#reset");
+const startButton = document.querySelector(".start");
+const resetButton = document.querySelector(".reset");
 const attemptMessage= document.querySelector("#attempts");
 //const attemptCount = document.querySelector("#attemptCount")
 const cards = document.querySelectorAll(".memory-card");
@@ -22,7 +22,8 @@ let secondCard;
 let lockBoard = false;
 let attemptCount
 let score = 0;
-
+reset()
+shuffle()
 function flipCard() {
     if (lockBoard) {
         return;
@@ -54,7 +55,7 @@ function checkMatch() {
         if (attemptCount >= 6) {
          attemptMessage.textContent = "Try Again!";
          attemptMessage.fontSize = "45px";
-         scoreToWin.textContent - "0";
+         scoreToWin.textContent = "0";
          cards.forEach((card) => {
          card.removeEventListener("click", flipCard)
          });
@@ -77,6 +78,7 @@ function unflippedPlayerCard() {
      reset();
     }, 800);
 }
+
 
 function reset() {
     playerFlippedCard = false;
