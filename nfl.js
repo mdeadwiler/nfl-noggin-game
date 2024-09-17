@@ -1,3 +1,4 @@
+//Rough Draft Pseudo 
 // make sure second card is hidden from the player
 // click to start game
 //shuffle cards before the start of the game
@@ -10,6 +11,28 @@
 //if timer runs out the player loses and ends game
 //if all selected cards match before timer is ended then player wins game
 // click to reset for new game
+//New Draft
+// Game Start
+// Player clicks to start the game
+// Shuffle cards before the game begins
+//Lock the board so no further selections can be made until cards reset
+
+// Card Behavior
+//Ensure the first card is visible (front) and the second card is hidden (back)
+// Player clicks to flip two cards (toggle) and check for a match
+// If the cards match, keep both cards visible (call matchCard())
+// If the cards do not match, flip the cards back (toggle back)
+
+// Game Logic
+// Track mismatches:
+// If there are more than three mismatches, the game is over (loop to check up to 4 attempts)
+// Track time:
+// If the timer runs out, the player loses, and the game ends
+// If all cards are matched before the timer ends, the player wins
+
+// Reset Game
+//Player clicks a reset button to shuffle cards and start a new game
+
 
 const resetButton = document.querySelector('.reset')
 const attemptMessage = document.querySelector('#attempts')

@@ -97,3 +97,43 @@
     font-size: larger;
     font-style: italic;
   }
+
+
+  @media (max-width: 768px) {
+    .memory-game {
+      width: 90vw;
+    }
+  
+    .memory-card {
+      flex: 0 1 calc(50% - 10px); 
+    }
+  
+    h1 {
+      font-size: 28px;
+    }
+  
+    p, li {
+      font-size: 16px;
+    }
+  
+    .reset {
+      font-size: 16px;
+    }
+  }
+  
+
+  @media (min-width: 1200px) {
+    .memory-game {
+      width: 60vw;
+      max-width: 500px;
+    }
+  
+    h1 {
+      font-size: 20px;
+    }
+  
+    p, li {
+      font-size: 15px;
+    }
+  }
+  
