@@ -4,20 +4,35 @@
     box-sizing: border-box;
 }
 
+
 body {
     height: 100vh;
     background: black;
 }
-.start {
+
+h1 {
     display: flex;
     justify-content: center;
-    margin: auto;
-    color: darkgoldenrod;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: larger;
-    font-style: italic;
-  }
+    margin-bottom: auto;
+    font:50px;
+    color:darkgoldenrod;
+    padding: 50px; 
+}
+p {
+    display: flex;
+    justify-content: center;
+    margin-bottom: auto;
+    color:darkgoldenrod;
+    padding: 0px; 
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    color:darkgoldenrod;
+    padding: 0px; 
+}
 
 .memory-game {
 width: 640px;
