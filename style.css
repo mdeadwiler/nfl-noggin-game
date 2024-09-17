@@ -6,7 +6,7 @@
 
 
 body {
-    height: 100vh;
+    height: 150vh;
     background: black;
 }
 
@@ -14,24 +14,27 @@ h1 {
     display: flex;
     justify-content: center;
     margin-bottom: auto;
-    font:50px;
+    padding: 28px;
+    font: 14px;
     color:darkgoldenrod;
-    padding: 50px; 
+     
 }
 p {
     display: flex;
     justify-content: center;
     margin-bottom: auto;
+    padding: 10px; 
+    font-size: 25px;
     color:darkgoldenrod;
-    padding: 0px; 
 }
 
 li {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
-    color:darkgoldenrod;
+    margin-bottom: 10px;
     padding: 0px; 
+    font-size: 20px;
+    color:darkgoldenrod;
 }
 
 .memory-game {
@@ -39,9 +42,9 @@ display: flex;
 width: 640px;
 height: 640px;
 margin: auto;
-display: flex;
+padding: 23px;
 flex-wrap: wrap;
-border: 2px solid white;
+border: 5px solid white;
 perspective: 1000px
 }
 
@@ -52,7 +55,7 @@ margin: 5px;
 position: relative;
 transform: scale(1);
 transform-style: preserve-3d;
-transition: transform .5s;
+transition: transform .6s;
 }
 
 /* .memory-card:active {
@@ -82,10 +85,10 @@ backFace-visibility: hidden;
     
 }
 
-#attempts {
+/*#attempts {
     font-size: 40px;
     text-decoration: solid;
-  }
+  }*/
   
 
 .reset {
