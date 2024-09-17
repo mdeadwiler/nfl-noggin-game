@@ -13,27 +13,27 @@
 
 const startButton = document.querySelector(".start");
 const resetButton = document.querySelector(".reset");
-const attemptMessage= document.querySelector("#attempts");
+const attemptMessage = document.querySelector("#attempts");
 //const attemptCount = document.querySelector("#attemptCount")
 const cards = document.querySelectorAll(".memory-card");
 let playerFlippedCard = false;
 let firstCard;
 let secondCard;
 let lockBoard = false;
-let attemptCount
+let attemptCount;
 let score = 0;
-reset()
-shuffle()
+reset();
+shuffle();
 function flipCard() {
-    if (lockBoard) {
-        return;
-    }
-    if (this === firstCard) {
-        return;
-    }
+  if (lockBoard) {
+    return;
+  }
+  if (this === firstCard) {
+    return;
+  }
   this.classList.add("flip");
-  
-  if(!playerFlippedCard) {
+
+  if (!playerFlippedCard) {
     //first card click
     playerFlippedCard = true;
     firstCard = this;
@@ -42,72 +42,70 @@ function flipCard() {
     playerFlippedCard = false;
     secondCard = this;
     checkMatch();
-    }
+  }
 }
 
 function checkMatch() {
-    if (firstCard.dataset.players === secondCard.dataset.players) {
-        //checkWin();
-    } else {
-        unflippedPlayerCard();
-        attemptCount++;
-        attemptCount.textContent = attemptCount;
-        if (attemptCount >= 6) {
-         attemptMessage.textContent = "Try Again!";
-         attemptMessage.fontSize = "45px";
-         scoreToWin.textContent = "0";
-         cards.forEach((card) => {
-         card.removeEventListener("click", flipCard)
-         });
-         //setTimeout()
+  if (firstCard.dataset.players === secondCard.dataset.players) {
+    //checkWin();
+  } else {
+    unflippedPlayerCard();
+    attemptCount++;
+    attemptCount.textContent = attemptCount;
+    if (attemptCount >= 6) {
+      attemptMessage.textContent = "Try Again!";
+      attemptMessage.fontSize = "45px";
+      scoreToWin.textContent = "0";
+      cards.forEach((card) => {
+        card.removeEventListener("click", flipCard);
+      });
+      //setTimeout()
+    }
   }
- }
 }
 
 function disableCard() {
-    firstCard.removeEventListener("click", flipCard);
-    secondCard.removeEventListener("click", flipCard);
-    reset();
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+  reset();
 }
 
 function unflippedPlayerCard() {
-    lockBoard = true;
-    setTimeout(function () {
-     firstCard.classList.remove("flip");
-     secondCard.classList.remove("flip");
-     reset();
-    }, 800);
+  lockBoard = true;
+  setTimeout(function () {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
+    reset();
+  }, 800);
 }
 
-
 function reset() {
-    playerFlippedCard = false;
-    lockBoard = false;
-    firstCard = null || "undefined";
-    secondCard = null || "undefined";
+  playerFlippedCard = false;
+  lockBoard = false;
+  firstCard = null || "undefined";
+  secondCard = null || "undefined";
 }
 
 function shuffle() {
-    cards.forEach((card) => {
-      let shuffledDeck = Math.floor(Math.random() * 12);
-      card.style.order = shuffledDeck;
-    });
-    //shuffle();
-  }// source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random && https://www.youtube.com/watch?v=NGtx3EBlpNE
-  
+  cards.forEach((card) => {
+    let shuffledDeck = Math.floor(Math.random() * 12);
+    card.style.order = shuffledDeck;
+  });
+  //shuffle();
+} // source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random && https://www.youtube.com/watch?v=NGtx3EBlpNE
+
 function resetGame() {
-  window.location.reload();// source: https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial
+  window.location.reload(); // source: https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial
 }
-cards.forEach(cards => cards.addEventListener("click", flipCard)); 
+cards.forEach((cards) => cards.addEventListener("click", flipCard));
 
-
-  startButton.addEventListener("click", startButton)
-  resetButton.addEventListener("click", resetGame);
+startButton.addEventListener("click", startButton);
+resetButton.addEventListener("click", resetGame);
 
 shuffle();
 
 //source: https://www.youtube.com/watch?v=ZniVgo8U7ek
-    //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
+//source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
 
 //use a ternary method
 /*const flipCard = () => {
@@ -131,6 +129,3 @@ const handleClick = () => {
 
 /*console.log(firstCard.dataset.players);
     console.log(secondCard.dataset.players);*/
-
-
-    
