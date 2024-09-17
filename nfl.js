@@ -1,36 +1,22 @@
-//Rough Draft Pseudo 
-// make sure second card is hidden from the player
-// click to start game
-//shuffle cards before the start of the game
-//make sure the bored is locked so that the cards flip back before the next click selection
-//make sure the first card is on top and the back card is hidden behind before click & flip
-//click to flip two cards to see if there is a match between the selection(toggle)
-// if there is not a match then flip cards back (toggle)(if else)
-//if there is a match then keep second card visible matchCard() removeCard()
-// if you miss match more than three times then the game is over (loop it => 4)
-//if timer runs out the player loses and ends game
-//if all selected cards match before timer is ended then player wins game
-// click to reset for new game
-//New Draft
 // Game Start
 // Player clicks to start the game
 // Shuffle cards before the game begins
 //Lock the board so no further selections can be made until cards reset
 
-// Card Behavior
+// Card action
 //Ensure the first card is visible (front) and the second card is hidden (back)
 // Player clicks to flip two cards (toggle) and check for a match
 // If the cards match, keep both cards visible (call matchCard())
 // If the cards do not match, flip the cards back (toggle back)
 
-// Game Logic
+// Logic behind NFL Noggin
 // Track mismatches:
 // If there are more than three mismatches, the game is over (loop to check up to 4 attempts)
 // Track time:
 // If the timer runs out, the player loses, and the game ends
 // If all cards are matched before the timer ends, the player wins
 
-// Reset Game
+// Reset the Game
 //Player clicks a reset button to shuffle cards and start a new game
 
 
