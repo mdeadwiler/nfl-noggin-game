@@ -35,6 +35,7 @@ li {
 }
 
 .memory-game {
+display: flex;
 width: 640px;
 height: 640px;
 margin: auto;

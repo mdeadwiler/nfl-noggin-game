@@ -11,7 +11,6 @@
 //if all selected cards match before timer is ended then player wins game
 // click to reset for new game
 
-const startButton = document.querySelector(".start");
 const resetButton = document.querySelector(".reset");
 const attemptMessage = document.querySelector("#attempts");
 //const attemptCount = document.querySelector("#attemptCount")
@@ -51,11 +50,11 @@ function checkMatch() {
   } else {
     unflippedPlayerCard();
     attemptCount++;
-    attemptCount.textContent = attemptCount;
-    if (attemptCount >= 6) {
-      attemptMessage.textContent = "Try Again!";
+    //attemptCount.textContent = attemptCount;
+    if (attemptCount >= 5) {
+      /*attemptMessage.textContent = "Try Again!";
       attemptMessage.fontSize = "45px";
-      scoreToWin.textContent = "0";
+      scoreToWin.textContent = "0";*/
       cards.forEach((card) => {
         card.removeEventListener("click", flipCard);
       });
@@ -99,7 +98,7 @@ function resetGame() {
 }
 cards.forEach((cards) => cards.addEventListener("click", flipCard));
 
-startButton.addEventListener("click", startButton);
+
 resetButton.addEventListener("click", resetGame);
 
 shuffle();
