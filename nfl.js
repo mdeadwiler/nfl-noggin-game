@@ -20,7 +20,7 @@ let firstCard
 let secondCard
 let lockBoard = false
 let attemptCount
-let score = 0
+
 reset()
 shuffle()
 function flipCard () {
