@@ -17,7 +17,7 @@
     padding: 20px;
   }
   
-  /* Heading and Paragraphs */
+  
   h1 {
     font-size: 36px;
     margin-bottom: 20px;
@@ -30,7 +30,7 @@
     text-align: center;
   }
   
-  /* List Styling */
+  
   ol {
     list-style-type: none;
     padding: 0;
@@ -43,24 +43,24 @@
     text-align: center;
   }
   
-  /* Memory Game Container */
+
   .memory-game {
     display: flex;
-    flex-wrap: wrap; /* Allows the cards to wrap into rows */
-    justify-content: center; /* Centers the cards horizontally */
-    width: 80vw; /* Default width for responsive layout */
-    max-width: 1024px; /* Limit the maximum width */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    width: 80vw; 
+    max-width: 1024px; 
     margin: 0 auto;
     padding: 10px;
     border: 5px solid white;
-    background: rgba(255, 255, 255, 0.1);
+    background: black;
   }
   
   .memory-card {
-    flex: 0 1 calc(25% - 10px); /* 4 cards per row, minus space for gaps */
+    flex: 0 1 calc(25% - 10px); 
     margin: 5px;
     position: relative;
-    padding-bottom: calc(33.33% - 10px); /* Keep the height proportional for a 3x4 grid */
+    padding-bottom: calc(33.33% - 10px); 
     transform: scale(1);
     transform-style: preserve-3d;
     transition: transform 0.6s;
@@ -70,7 +70,7 @@
     transform: rotateY(180deg);
   }
   
-  /* Card Faces */
+
   .front-face,
   .back-face {
     width: 100%;
@@ -86,7 +86,7 @@
     transform: rotateY(180deg);
   }
   
-  /* Reset Button */
+  
   .reset {
     display: inline-block;
     margin-top: 20px;
@@ -99,16 +99,16 @@
     text-align: center;
   }
   
-  /* Media Queries */
+
   
-  /* For phones and small devices */
+  
   @media (max-width: 768px) {
     .memory-game {
       width: 90vw;
     }
   
     .memory-card {
-      flex: 0 1 calc(50% - 10px); /* 2 cards per row */
+      flex: 0 1 calc(50% - 10px); 
     }
   
     h1 {
@@ -124,7 +124,7 @@
     }
   }
   
-  /* For large desktops */
+
   @media (min-width: 1200px) {
     .memory-game {
       width: 70vw;
@@ -140,3 +140,5 @@
     }
   }
   
+
+ 
