@@ -127,16 +127,16 @@
 
   @media (min-width: 1200px) {
     .memory-game {
-      width: 70vw;
-      max-width: 1200px;
+      width: 60vw;
+      max-width: 500px;
     }
   
     h1 {
-      font-size: 40px;
+      font-size: 20px;
     }
   
     p, li {
-      font-size: 20px;
+      font-size: 15px;
     }
   }
   
