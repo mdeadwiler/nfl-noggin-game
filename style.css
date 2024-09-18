@@ -87,6 +87,15 @@
   }
   
   
+  .winner-message h2 {
+    font-size: 20px;
+  }
+
+  .winner-message p {
+    font-size: 16px;
+  }
+
+
   .reset {
     display: inline-block;
     margin-top: 20px;
@@ -119,10 +128,14 @@
       font-size: 16px;
     }
   
+    
+  }
+  
+
     .reset {
       font-size: 16px;
     }
-  }
+  
   
 
   @media (min-width: 1200px) {
@@ -140,5 +153,7 @@
     }
   }
   
+
+
 
  

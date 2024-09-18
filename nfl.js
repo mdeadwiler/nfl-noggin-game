@@ -22,7 +22,7 @@
 // Select DOM elements
 const resetButton = document.querySelector('.reset');
 const cards = document.querySelectorAll('.memory-card');
-
+const winnerMessage = document.getElementById("winner-message");
 // Game state variables
 let playerFlippedCard = false;
 let firstCard = null;
@@ -82,13 +82,7 @@ function unflipCards() {
   }, 400);
 }
 
-function checkWinner() {
-  if (matchedPairs === totalPairs) {
-    setTimeout(() => {
-      alert('Congratulations! You won the game!');
-    }, 500);
-  }
-}
+
 
 // Reset the game state
 function reset() {
@@ -104,6 +98,15 @@ function shuffle() {
     const shuffledDeck = Math.floor(Math.random() * cards.length);
     card.style.order = shuffledDeck;
   });
+}
+
+
+function checkWinner() {
+  if (matchedPairs === totalPairs) {
+    setTimeout(() => {
+      alert('You won the game!');
+    }, 500);
+  }
 }
 
 // Reset the game by reloading the page
