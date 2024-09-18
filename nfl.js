@@ -2,29 +2,26 @@
 // Player clicks to start the game
 // Shuffle cards before the game begins
 //Lock the board so no further selections can be made until cards reset
-
-// Card action
+/*----------------------------Card action---------------------------------------------------*/
 //Ensure the first card is visible (front) and the second card is hidden (back)
 // Player clicks to flip two cards (toggle) and check for a match
 // If the cards match, keep both cards visible (call matchCard())
 // If the cards do not match, flip the cards back (toggle back)
 
-// Logic behind NFL Noggin
+/*------------------- Logic behind NFL Noggin------*/
 // Track mismatches:
-// If there are more than three mismatches, the game is over (loop to check up to 4 attempts)
-// Track time:
-// If the timer runs out, the player loses, and the game ends
-// If all cards are matched before the timer ends, the player wins
+// If there are mismatches, the memory game exercise will not be complete
+// There is no time limit to complete the game. You will have all chances to complete the game. This wil test your patience and memory
 
-// Reset the Game
-//Player clicks a reset button to shuffle cards and start a new game
+/*-----------------Reset the Game--------------------------*/
+//Player clicks a reset button to shuffle cards and start a new game. But before that, you will be notified that you finished the game. Have fun!
 
-// Select DOM elements
+/*-------------------------My DOM elements---------------*/
 const resetButton = document.querySelector('.reset')
 const cards = document.querySelectorAll('.memory-card')
-const winnerMessage = document.getElementById('winner-message')
+//const winnerMessage = document.getElementById('winner-message') This was my 'pop up' message to be notified the player won(but we are not allowed!)
 const instructions = document.querySelectorAll('.instructions')
-// Game variables
+/*------------- Game variables--------------------------------*/
 let playerFlippedCard = false
 let firstCard = null
 let secondCard = null
@@ -40,7 +37,7 @@ shuffle()
 
 // Function to handle card flip
 function flipCard () {
-  // Prevent interaction if the board is locked or the same card is clicked twice
+  // This prevents interaction if the board is locked or the same card is clicked twice
   if (lockBoard || this === firstCard) return
 
   this.classList.add('flip')
@@ -67,7 +64,7 @@ function checkMatch () {
   }
 }
 
-// Disable cards after a match
+// This disable cards after a match
 function disableCards () {
   firstCard.removeEventListener('click', flipCard)
   secondCard.removeEventListener('click', flipCard)
@@ -75,7 +72,7 @@ function disableCards () {
   reset()
 }
 
-// Flip cards back if they do not match
+// This flips the cards back if they do not match
 function unflipCards () {
   lockBoard = true
   setTimeout(() => {
@@ -122,6 +119,7 @@ resetButton.addEventListener('click', resetGame)
 
 //source: https://www.youtube.com/watch?v=ZniVgo8U7ek
 //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
+//https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/
 
 //use a ternary method
 /*const flipCard = () => {
