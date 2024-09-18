@@ -23,6 +23,7 @@
 const resetButton = document.querySelector('.reset');
 const cards = document.querySelectorAll('.memory-card');
 const winnerMessage = document.getElementById("winner-message");
+const instructions = document.querySelectorAll('.instructions')
 // Game state variables
 let playerFlippedCard = false;
 let firstCard = null;
@@ -30,6 +31,8 @@ let secondCard = null;
 let lockBoard = false;
 let matchedPairs = 0;
 const totalPairs = cards.length / 2;
+
+console.log(instructions)
 
 // Initialize game
 reset();
@@ -103,9 +106,12 @@ function shuffle() {
 
 function checkWinner() {
   if (matchedPairs === totalPairs) {
-    setTimeout(() => {
-      alert('You won the game!');
-    }, 500);
+
+    instructions[0].innerHTML = '<h1>CONGRATULATIONS, YOU WIN!</h1>';
+    instructions[1].innerText = '';
+    instructions[2].innerText = '';
+    instructions[3].innerText = '';
+    instructions[4].innerText = '';
   }
 }
 
