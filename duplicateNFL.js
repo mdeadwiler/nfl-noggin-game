@@ -1,6 +1,5 @@
 // Select DOM elements
 const resetButton = document.querySelector('.reset');
-const attemptMessage = document.querySelector('#attempts');
 const cards = document.querySelectorAll('.memory-card');
 
 // Game state variables
@@ -8,7 +7,7 @@ let playerFlippedCard = false;
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
-let attemptCount = 0;
+
 
 // Initialize game
 reset();
@@ -41,13 +40,7 @@ function checkMatch() {
   } else {
     // Cards don't match
     unflipCards();
-    attemptCount++;
-    attemptMessage.textContent = `Attempts: ${attemptCount}`;
-    if (attemptCount >= 5) {
-      attemptMessage.textContent = "Game Over!";
-      attemptMessage.style.fontSize = "45px";
-      cards.forEach(card => card.removeEventListener('click', flipCard));
-    }
+    
   }
 }
 
@@ -65,7 +58,7 @@ function unflipCards() {
     firstCard.classList.remove('flip');
     secondCard.classList.remove('flip');
     reset();
-  }, 800);
+  }, 100);
 }
 
 // Reset the game state
