@@ -125,6 +125,66 @@ resetButton.addEventListener('click', resetGame)
 //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
 //https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/
 
+/* 
+To determine the Big O notation for this code, we need to analyze the time complexity of its operations. Let's break it down by functions:
+
+Initialization and setup: O(n)
+
+Querying DOM elements: O(n)
+Initial reset() and shuffle(): O(n)
+
+
+flipCard(): O(1)
+
+Constant time operations
+
+
+checkMatch(): O(1)
+
+Constant time operations
+
+
+disableCards(): O(1)
+
+Constant time operations
+
+
+unflipCards(): O(1)
+
+Constant time operations (setTimeout doesn't affect complexity)
+
+
+reset(): O(1)
+
+Constant time operations
+
+
+shuffle(): O(n)
+
+Iterates through all cards once
+
+
+checkWinner(): O(1)
+
+Constant time operations
+
+
+resetGame(): O(1)
+
+Constant time operation (page reload)
+
+
+
+The dominant factor in this code is the shuffle() function, which has a time complexity of O(n), where n is the number of cards. All other functions operate in constant time O(1) or are called a constant number of times.
+Therefore, the overall time complexity of this code in Big O notation is O(n), where n is the number of cards.
+It's worth noting that the space complexity is also O(n) due to the storage of card elements and other game state variables.
+*/
+
+
+
+
+
+
 //use a ternary method
 /*const flipCard = () => {
     this.classList.toggle('click to flip');
