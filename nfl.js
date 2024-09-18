@@ -28,7 +28,8 @@ let playerFlippedCard = false;
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
-
+let matchedPairs = 0;
+const totalPairs = cards.length / 2;
 
 // Initialize game
 reset();
@@ -56,12 +57,10 @@ function flipCard() {
 // Function to check if two flipped cards match
 function checkMatch() {
   if (firstCard.dataset.players === secondCard.dataset.players) {
-    // Cards match
     disableCards();
+    checkWinner();
   } else {
-    // Cards don't match
     unflipCards();
-    
   }
 }
 
@@ -69,6 +68,7 @@ function checkMatch() {
 function disableCards() {
   firstCard.removeEventListener('click', flipCard);
   secondCard.removeEventListener('click', flipCard);
+  matchedPairs++;
   reset();
 }
 
@@ -80,6 +80,14 @@ function unflipCards() {
     secondCard.classList.remove('flip');
     reset();
   }, 400);
+}
+
+function checkWinner() {
+  if (matchedPairs === totalPairs) {
+    setTimeout(() => {
+      alert('Congratulations! You won the game!');
+    }, 500);
+  }
 }
 
 // Reset the game state
