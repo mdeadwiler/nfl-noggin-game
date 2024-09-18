@@ -1,6 +1,6 @@
 # NFL Memory Game
 
-![NFL](https://w0.peakpx.com/wallpaper/792/854/HD-wallpaper-nfl-football-thumbnail.jpg)
+![NFL](./images/nFLwireFrame.jpg)
 
 ## **_Rules and how to play the game_**
 
