@@ -2,7 +2,9 @@
 // Player clicks to start the game
 // Shuffle cards before the game begins
 //Lock the board so no further selections can be made until cards reset
+
 /*----------------------------Card action---------------------------------------------------*/
+
 //Ensure the first card is visible (front) and the second card is hidden (back)
 // Player clicks to flip two cards (toggle) and check for a match
 // If the cards match, keep both cards visible (call matchCard())
@@ -17,10 +19,12 @@
 //Player clicks a reset button to shuffle cards and start a new game. But before that, you will be notified that you finished the game. Have fun!
 
 /*-------------------------My DOM elements---------------*/
+
 const resetButton = document.querySelector('.reset')
 const cards = document.querySelectorAll('.memory-card')
 //const winnerMessage = document.getElementById('winner-message') This was my 'pop up' message to be notified the player won(but we are not allowed!)
 const instructions = document.querySelectorAll('.instructions')
+
 /*------------- Game variables--------------------------------*/
 let playerFlippedCard = false
 let firstCard = null
