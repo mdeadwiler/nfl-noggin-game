@@ -124,7 +124,7 @@ resetButton.addEventListener('click', resetGameWindow)
 //source: https://www.youtube.com/watch?v=ZniVgo8U7ek
 //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
 //https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/
-
+//https://ezmp3.cc/ shout to Zaire!!!
 /*
 
 To determine the Big O notation for this code, we need to analyze the time complexity of its operations. Let's break it down by functions:
