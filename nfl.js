@@ -22,7 +22,7 @@
 
 const resetButton = document.querySelector('.reset')
 const cards = document.querySelectorAll('.memory-card')
-//const winnerMessage = document.getElementById('winner-message') This was my 'pop up' message to be notified the player won(but we are not allowed!)
+//const winnerMessage = document.getElementById('winner-message') This was my 'pop up' message to be notified the player won(but we are not allowed! Shout out to Rani!)
 const instructions = document.querySelectorAll('.instructions')
 
 /*------------- Game variables--------------------------------*/
