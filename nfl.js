@@ -13,7 +13,7 @@
 /*------------------- Logic behind NFL Noggin------*/
 // Track mismatches:
 // If there are mismatches, the memory game exercise will not be complete
-// There is no time limit to complete the game. You will have all chances to complete the game. This wil test your patience and memory
+// There is no time limit to complete the game. You will have all chances to complete the game. This will test your patience and memory
 
 /*-----------------Reset the Game--------------------------*/
 //Player clicks a reset button to shuffle cards and start a new game. But before that, you will be notified that you finished the game. Have fun!
