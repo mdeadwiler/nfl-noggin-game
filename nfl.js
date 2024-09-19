@@ -64,7 +64,7 @@ function checkMatch () {
     disableCards()
     checkWinner()
   } else {
-    unflipCards()
+    unFlipCards()
   }
 }
 
@@ -77,7 +77,7 @@ function disableCards () {
 }
 
 // This flips the cards back if they do not match
-function unflipCards () {
+function unFlipCards () {
   lockBoard = true
   setTimeout(() => {
     firstCard.classList.remove('flip')
@@ -113,19 +113,20 @@ function checkWinner () {
 }
 
 // Reset the game by reloading the page
-function resetGame () {
+function resetGameWindow () {
   window.location.reload()
 }
 
 // Event listeners
 cards.forEach(card => card.addEventListener('click', flipCard))
-resetButton.addEventListener('click', resetGame)
+resetButton.addEventListener('click', resetGameWindow)
 
 //source: https://www.youtube.com/watch?v=ZniVgo8U7ek
 //source: https://www.improvememory.org/brain-games/memory-games/happy-halloween/
 //https://www.freecodecamp.org/news/refresh-the-page-in-javascript-js-reload-window-tutorial/
 
 /* 
+
 To determine the Big O notation for this code, we need to analyze the time complexity of its operations. Let's break it down by functions:
 
 Initialization and setup: O(n)
@@ -149,7 +150,7 @@ disableCards(): O(1)
 Constant time operations
 
 
-unflipCards(): O(1)
+unFlipCards(): O(1)
 
 Constant time operations (setTimeout doesn't affect complexity)
 
